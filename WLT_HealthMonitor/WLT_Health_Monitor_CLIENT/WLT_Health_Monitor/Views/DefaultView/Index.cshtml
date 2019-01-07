@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewData["Title"] = "Default View ";
+}
+
+<h2 id="header">Server Logging Information</h2>
+
+<style type="text/css">
+   
+</style>
+
+<div class="row" style="height:800px;overflow-y:auto">
+    <div class="card horizontal">
+
+
+        <div class="">
+         
+            <table id="serverLogs">
+                <thead>
+                    <tr>
+                        <td>SERVER NAME</td>
+                        <td>CPU</td>
+                        <td>RAM</td>
+                        <td>DISK</td>
+                        <td>MSMQ</td>
+                    </tr>
+
+                </thead>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+@section Scripts {
+    <script src="~/lib/signalr/jquery-1.6.4.min.js"></script>
+    <script src="~/lib/signalr/jquery.signalR-2.2.3.min.js"></script>
+    
+
+    <script type="text/javascript">
+    
+        $(function () {
+
+
+            var   HubsConnection = [
+                { connection: 'http://localhost:53013/signalr/' },
+                { connection: 'http://localhost:8000/signalr/' },
+
+            ]
+
+            var ServerListeners = function (connString) { 
+                
+                var connection = $.hubConnection( connString );
+                var hub = connection.createHubProxy("ChatHub");
+                hub.on('broadcastMessage', function (userName, message) {
+                    console.log(userName + ' ' + message);
+
+                    //serverLogs
+
+
+                    var Server_ = JSON.parse(message);
+
+                    var tr = "";
+                    tr += '<tr>'
+                    tr += '<td> ' + Server_.COMPUTERNAME + '</td>'
+                    tr += '<td> ' + Server_.CPU + '</td>'
+                    tr += '<td> ' + Server_.RAM + '</td>'
+                    tr += '<td> ' + Server_.DISK + '</td>'
+                    tr += '<td> ' + Server_.MSMQ + '</td>'
+                    tr += '</tr>'
+
+                    $("#serverLogs").prepend(tr);
+
+                });
+
+                connection.start()
+                    .done(function () { console.log('Now connected, connection ID=' + connection.id); })
+                    .fail(function (data) { console.log('Could not connect', data); });
+
+            }
+
+            $.each(HubsConnection,function ( index,ConnObject ) {
+
+                ServerListeners(ConnObject.connection);
+
+            })
+           
+           
+
+        })
+    </script>
+}
+
+

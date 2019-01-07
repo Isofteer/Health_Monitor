@@ -1,0 +1,66 @@
+﻿@model WLT_HealthMonitor.Models.wlt_ThreshholdSettings
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@{
+    var selectionlist = (List<SelectListItem>)ViewData["selectionlist"];
+}
+
+
+
+<div class="card">
+
+        <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-4">
+            <h2>Create</h2>
+            <h4>new threshhold Settings</h4>
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Resource" class="control-label"></label>
+                    <select asp-for="Resource" class="form-control">
+                        <option selected="selected">CPU</option>
+                        <option value="RAM">RAM</option>
+                        <option value="DISK">DISK</option>
+                        <option value="MSMQ">MSMQ</option>
+                    </select>
+                    <span asp-validation-for="Resource" class="text-danger"></span>
+                </div>
+                @*<div class="form-group">
+                    <label asp-for="ifkUserID" class="control-label"></label>
+                    <input asp-for="ifkUserID" class="form-control" />
+                    <span asp-validation-for="ifkUserID" class="text-danger"></span>
+                </div>*@
+                <div class="form-group">
+                    <label asp-for="ifkServerID" class="control-label"></label>
+                    <select class="form-control" asp-for="ifkServerID" asp-items="selectionlist"></select>
+
+
+                    @*<input asp-for="ifkServerID" class="form-control" />*@
+                    @*<span asp-validation-for="ifkServerID" class="text-danger"></span>*@
+                </div>
+                <div class="form-group">
+                    <label asp-for="ResouceValue" class="control-label"></label>
+                    <input type="number" asp-for="ResouceValue" class="form-control"  />
+                    <span asp-validation-for="ResouceValue" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </form>
+            <div style=" margin-top:10px;padding:10px">
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

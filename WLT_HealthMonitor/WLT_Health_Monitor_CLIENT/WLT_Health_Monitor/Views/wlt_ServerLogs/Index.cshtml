@@ -1,0 +1,175 @@
+﻿@model IEnumerable<WLT_HealthMonitor.Models.wlt_ServerLogs>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<link href="~/lib/Calender/dist/material-datetime-picker.css" rel="stylesheet" />
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<div class="row">
+    <div class="col-md-8">
+        <h3>Serverlogs History </h3>
+    </div>
+    <div class="col-md-3">
+
+
+        <div style="float:right;margin-top:10px;width:250px;" class="">
+            <form asp-action="Index" method="get">
+                <div class="form-actions no-color">
+
+                    <p class="">
+                        <select   style="display:block" name="signal" id="signal">
+                            <option value="3">Day</option>
+                            <option  value="2">Hour</option>
+                            <option value="1">Minute</option>
+
+                        </select>
+                        <input name="QueryDate" id="date_Picker" value="@ViewData["QueryDate"]" />
+
+
+                    </p>
+                    <p>
+                        <input type="submit" value="Get" class="btn btn-default" /> |
+                        <a class="btn btn-default " asp-action="Index">Back to Full List</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ServerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DISK)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CPU)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RAM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MSMQ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SendDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="main-body">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ServerID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ServerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DISK)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CPU)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RAM)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MSMQ)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SendDate)
+                </td>
+                @*<td>
+                        <a asp-action="Edit" asp-route-id="@item.ipkServerlogID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ipkServerlogID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ipkServerlogID">Delete</a>
+                    </td>*@
+            </tr>
+        }
+    </tbody>
+    <tbody class="secondary-body"></tbody>
+</table>
+
+@section Scripts  {
+
+    <script src="~/lib/Calender/dist/jquery.min.js"></script>
+    <link href="~/lib/Calender/dist/jquery.datetimepicker.css" rel="stylesheet" />
+    <script src="~/lib/Calender/dist/php-date-formatter.js"></script>
+    <script src="~/lib/Calender/dist/jquery.mousewheel.js"></script>
+    <script src="~/lib/Calender/dist/jquery.datetimepicker.js"></script>
+
+
+    <script>
+
+        
+        function reposndToDateChange() { 
+           
+
+            
+
+        }
+
+
+        $("#signal").change(function () { 
+
+           
+            var _xdsoft_datetimepicker$ = $('#date_Picker').data('xdsoft_datetimepicker')
+
+            if (this.value == 1) {
+                _xdsoft_datetimepicker$.setOptions({ format:"Y-M-d H:i"});
+
+            }
+            else if (this.value == 2) {
+                _xdsoft_datetimepicker$.setOptions({ format: "Y-M-d H" });
+
+            }
+            else { 
+
+                _xdsoft_datetimepicker$.setOptions({ format: "Y-M-d" });
+
+            }
+          
+            
+        })
+
+        $('#date_Picker').datetimepicker({
+            value: new Date(),
+            format: 'Y-M-d H:i',          
+           // onSelectDate: ,
+            //showApplyButton: true,
+            onSelectTime: function () {
+
+            },
+            onChangeDateTime: reposndToDateChange,
+
+
+
+        });
+
+
+    </script>
+
+
+}

@@ -1,0 +1,388 @@
+﻿
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div>
+    <div class="right-justified">
+        <a asp-action="ServerOverview" class=" btn waves-effect"  > Back to Overview</a>
+    </div>
+
+    <h2 id="serverName">  Detail</h2>
+</div>
+
+<input type="hidden" id="customInput" value="@ViewBag.serverLogs" />
+<input type="hidden" id="serverID_" value="@ViewBag.serverID" />
+
+
+
+<div class="row">
+    <div class="col m6">
+        <div class="card">
+            <span class="card-title">CPU   </span>
+            <div style="width:100%" class="card horizontal card-content">
+                <div class="chart chartCPU " style="height:300px;width:100%" id="chartCPU">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col m6">
+        <div class="card">
+            <span class="card-title">DISK</span>
+            <div style="width:100%" class="card horizontal card-content">
+                <div class="chart chartDISK" style="height:300px;width:100%" id="chartDISK">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="col m6">
+        <div class="card">
+            <span class="card-title">RAM</span>
+            <div style="width:100%" class="card horizontal card-content">
+                <div class="chart chartRAM" style="height:300px;width:100%" id="chartRAM">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div style="display:" class="col m6">
+        <div class="card">
+            <span class="card-title">MSMQ</span>
+            <div style="width:100%" class="card horizontal card-content">
+                <div class="chart chartMSMQ" style="height:300px;width:100%" id="chartMSMQ">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  
+
+</div>
+
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+
+    Date.prototype.addHours = function (h) {
+        this.setTime(this.getTime() + (h * 60 * 60 * 1000));
+        return this;
+    }
+
+    $(function () {
+        var DatabaseCons;
+        console.log("......................................");
+        console.log("......................................");
+        var _databaseValues = JSON.parse($("#customInput").val());
+
+        console.log(_databaseValues.Result);
+        
+        console.log("......................................");
+        console.log("......................................");
+        console.log("......................................");
+        
+
+        var graphs = [];
+
+        var charts = [];
+
+        var NewGraph = function (index, el) {
+
+            var graph = new AmCharts.AmGraph();
+
+            graph.title = "";
+
+            graph.bullet = "round";
+
+            graph.valueField = "g" + index;
+
+            graph.hideBulletsCount = 30;
+
+            graph.fillAlphas = 0.5;
+
+            graph.lineThickness = 2,
+
+            graph.fillColors = "#0FEEE8";
+
+            graph.lineColor = "#0FEEE8";
+
+            graph.id_ = "graph" + index;
+
+            graph.type_el = el;
+
+            return graph;
+
+        }
+
+        $.each($(".chart"), function (index, el) {
+
+            var chartObject = createChart(el);
+
+            var chart = chartObject.chart;
+
+            charts.push(chart);
+            
+            DatabaseCons = HubsConnection.filter(function (connOb)
+            {
+                return connOb.conn_ID == $("#serverID_").val();
+            });
+
+                     
+            DatabaseCons.forEach(function (value, index) {
+
+
+                var lstGraphs =   []               
+                lstGraphs.push(NewGraph(index, el));
+                if ($(el).hasClass("chartMSMQ")) {
+                   
+                    lstGraphs.push(NewGraph(index+1, el));
+
+                }
+              
+                lstGraphs.forEach(function (graph) {
+                    chart.addGraph(graph);
+
+                })
+
+            })
+
+        })
+
+        var AppendDatatochart =function (chart,data){
+
+
+            console.log("...................................");
+            console.log("...................................");
+            console.log("...................................");
+            console.log("...................................");
+            console.log("...................................");
+            console.log("...................................");
+            console.log("...................................");
+
+            console.log(chart.dataProvider.length);
+
+            console.log("...................................");
+            console.log("...................................");
+            console.log("...................................");
+            console.log("...................................");
+            console.log("...................................");
+            console.log("...................................");
+            console.log("...................................");
+            console.log("...................................");
+            console.log("...................................");
+            console.log("...................................");
+
+
+            if (chart.dataProvider.length >= 1000) {
+
+                chart.dataProvider.splice(0, 1)
+
+            }
+            chart.dataProvider.push(data)
+           
+
+        }
+
+        var func = function (index, Server_,hasSentDate) {
+
+
+            charts.forEach(function (chart) {
+                chart.graphs.forEach(function (graph) {
+
+                    if (graph.type_el == $("#chartCPU")[0] && graph.id_ == "graph" + index) {
+                        LoadCPUgraph(graph, Server_, index, hasSentDate);
+                    }
+                    if (graph.type_el == $("#chartDISK")[0] && graph.id_ == "graph" + index) {
+                        LoadDISKgraph(graph, Server_, index, hasSentDate);
+                    }
+                    if (graph.type_el == $("#chartRAM")[0] && graph.id_ == "graph" + index) {
+                        LoadRAMgraph(graph, Server_, index, hasSentDate);
+                    }
+
+                    if (graph.type_el == $("#chartMSMQ")[0] && graph.id_ == "graph" + index) {
+
+
+                        graph.fillColors = "#fff";
+
+                        graph.lineColor = "#00ff00";
+
+                        LoadMSMQgraph(graph, Server_, index, hasSentDate);
+                    }
+
+                    if (graph.type_el == $("#chartMSMQ")[0] && graph.id_ == "graph" + (index + 1)) {
+
+
+                        graph.fillColors = "#fff";
+
+                        graph.lineColor = "#FF4500";
+
+                        LoadMSMQgraph(graph, Server_, index+1, hasSentDate);
+                    }
+
+                })
+
+
+                   
+
+            });
+
+        }
+
+        var result = _databaseValues.Result;
+
+        result.forEach(function (result) { 
+
+          
+                var object = {};
+
+                object["CPU"] = result.CPU;
+
+                object["RAM"] = result.RAM;
+
+                object["DISK"] = result.DISK;
+
+                object["MSMQ"] = result.MSMQ;
+
+                object["SERVERNAME"] = result.ServerName;
+
+                object["COMPUTERNAME"] = result.COMPUTERNAME;
+
+                object["SendDate"] = new Date(result.DatabaseTime).addHours(3);
+
+                object["MSMQ_ALERTS"] = result.MSMQ_ALERTS;
+
+                object["MSMQ_UTSIN"] = result.MSMQ_UTSIN;
+     
+                console.log(object);
+
+                func(0, object,true);
+
+
+
+
+        })
+
+        var ServerListeners = function (index, hub) {
+
+            hub.on('broadcastMessage', function (userName, message) {
+                var Server_ = JSON.parse(message);
+
+                $("#serverName").text(Server_.COMPUTERNAME + " Details ");
+
+
+                console.log(Server_);
+
+
+                func(index, Server_,false)
+                
+               
+
+
+            });
+
+
+
+        }
+
+        $.each(DatabaseCons, function (index, ConnObject) {
+
+            ServerListeners(index, ConnObject.hub);
+
+        })
+
+
+        function LoadCPUgraph(graph, Server_, index, hasSentDate) {
+
+            var _O_jct = new Object();
+
+            _O_jct["g" + index] = Server_.CPU.toFixed(2);
+
+            _O_jct.date = hasSentDate ? Server_.SendDate : new Date();
+
+            graph.title = Server_.COMPUTERNAME;
+
+            AppendDatatochart(graph.chart, _O_jct);
+
+            if (!hasSentDate)  graph.chart.validateData();
+
+
+        }
+
+        function LoadDISKgraph(graph, Server_, index, hasSentDate) {
+
+            graph.title = Server_.COMPUTERNAME;
+
+            var _O_jct = new Object();
+
+            _O_jct["g" + index] = Server_.DISK.toFixed(2);
+
+            _O_jct.date = hasSentDate ? Server_.SendDate :  new Date();
+
+            AppendDatatochart(graph.chart, _O_jct);
+
+            if (!hasSentDate) graph.chart.validateData();
+
+        }
+
+        function LoadRAMgraph(graph, Server_, index, hasSentDate) {
+
+            graph.title = Server_.COMPUTERNAME;
+
+            var _O_jct = new Object();
+
+            _O_jct["g" + index] = Server_.RAM.toFixed(2);
+
+            _O_jct.date = hasSentDate ? Server_.SendDate :  new Date();
+                    
+
+           AppendDatatochart(graph.chart, _O_jct);
+
+
+           if (!hasSentDate)  graph.chart.validateData();
+
+        }
+
+
+
+        function LoadMSMQgraph(graph, Server_, index, hasSentDate) {
+
+            var MSMQ = "";
+
+            if (index == 0) {
+
+                MSMQ = "MSMQ_ALERTS";
+                graph.title = MSMQ;
+              
+            }
+            else
+            {
+                MSMQ = "MSMQ_UTSIN";
+                graph.title = MSMQ
+                               
+            }
+        
+
+            var _O_jct = new Object();
+
+            _O_jct["g" + index] = Server_[MSMQ].toFixed(0);
+
+            _O_jct.date = hasSentDate ? Server_.SendDate:  new Date();
+
+            AppendDatatochart(graph.chart, _O_jct);
+
+            if (!hasSentDate) graph.chart.validateData();
+
+        }
+
+
+    })
+</script>

@@ -1,0 +1,51 @@
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\RESOURCESERVER.dll.config
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\RESOURCESERVER.dll
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\RESOURCESERVER.pdb
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.Owin.Cors.dll
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.Owin.dll
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Newtonsoft.Json.dll
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Owin.dll
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\System.Web.Cors.dll
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.Owin.xml
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.Owin.Cors.xml
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\bin\Newtonsoft.Json.xml
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\obj\Release\RESOURCESERVER.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\obj\Release\RESOURCESERVER.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\obj\Release\RESOURCESERVER.dll
+C:\Users\User\Desktop\work space\RESOURCESERVER_2\RESOURCESERVER\obj\Release\RESOURCESERVER.pdb
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\RESOURCESERVER.dll.config
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\RESOURCESERVER.dll
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\RESOURCESERVER.pdb
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.Owin.Cors.dll
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.Owin.dll
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.Owin.Security.dll
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Newtonsoft.Json.dll
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Owin.dll
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\System.Web.Cors.dll
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.Owin.xml
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.Owin.Cors.xml
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Microsoft.Owin.Security.xml
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\bin\Newtonsoft.Json.xml
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\obj\Release\RESOURCESERVER.csprojAssemblyReference.cache
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\obj\Release\RESOURCESERVER.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\obj\Release\RESOURCESERVER.csproj.CopyComplete
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\obj\Release\RESOURCESERVER.dll
+C:\Users\User\Desktop\apps\RESOURCESERVER_2\RESOURCESERVER\obj\Release\RESOURCESERVER.pdb

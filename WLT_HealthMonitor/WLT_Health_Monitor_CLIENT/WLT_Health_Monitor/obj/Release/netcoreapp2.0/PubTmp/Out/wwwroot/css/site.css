@@ -1,0 +1,188 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border-style:solid;
+
+}
+
+html, body {
+    height: 100%;
+
+   
+}
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+
+.toast-success {
+    background-color:green !important;
+}
+
+.toast-fail {
+    background-color: red !important;
+}
+
+
+.toast-info {
+    background-color: yellow !important;
+    color:#282626 !important;
+}
+
+.pignose-calender {
+  
+    font-family: 'Open Sans';
+    
+    
+}
+
+.language-calender .pignose-calender {
+    margin-top: .4em !important;
+}
+.c-btn {
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 600;
+    display: inline-block;
+    line-height: 36px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    min-width: 88px;
+    height: 36px;
+    margin: 10px 8px;
+    padding: 0 8px;
+    text-align: center;
+    letter-spacing: .5px;
+    border-radius: 2px;
+    background: #F1F1F1;
+    color: #393939;
+    transition: background 200ms ease-in-out;
+    box-shadow: 0 3.08696px 5.82609px 0 rgba(0, 0, 0, 0.16174), 0 3.65217px 12.91304px 0 rgba(0, 0, 0, 0.12435);
+}
+
+.c-btn--flat {
+    background: transparent;
+    margin: 10px 8px;
+    min-width: 52px;
+}
+
+.c-btn:hover {
+    background: rgba(153, 153, 153, 0.2);
+    color: #393939;
+}
+
+.c-btn:active {
+    box-shadow: 0 9.6087px 10.78261px 0 rgba(0, 0, 0, 0.17217), 0 13.56522px 30.3913px 0 rgba(0, 0, 0, 0.15043);
+}
+
+.c-btn--flat, .c-btn--flat:hover, .c-btn--flat:active {
+    box-shadow: none;
+}
+
+.table-wrapper {
+   
+    height:80%;
+    /*border-style:solid;*/
+}
+
+
+.max-height {
+    height:100%;
+    overflow:scroll;
+}
+
+
+table.cls-table {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 5px 5px;
+}
+
+table.cls-table, tr {
+   
+}
+    table.cls-table tr td {
+        padding-top: 10px !important;
+        font-weight: bold;
+        color: #F1F1F1;
+        font-size: 40px;
+        text-align: center;
+        margin: 10px !important;
+        box-shadow: 0.5px 1px 1px 0px #4d4b4b;
+    }
+    table.cls-table tr.act td {
+        padding-top: 10px !important;
+        font-weight: bold;
+        color: #F1F1F1;
+        font-size: 40px;
+        text-align: center;
+        margin: 10px !important;
+        box-shadow: 0px 0px 2px 0px grey;
+    }
+.label-row {
+    width:200px;
+    color:#282626 !important;
+    font-size:60px;
+    font-family:'Segoe UI';
+    text-align:left !important;
+}
+.gOverview-header {
+    color: #282626 !important;
+    font-family: 'Century Gothic';
+    /*background-color: black;*/
+    font-weight:lighter;
+    font-size: 70px;
+}
+.red-background {
+    background-color:#fa8c8c !important;
+    color:white;
+    font-weight:bold;
+
+}
+.green-background {
+    background-color: #576525 !important;
+    color: white;
+    font-weight: bold;
+}
+@media only screen and (min-width : 1261px) {
+    #toast-container {
+        min-width: 8%;
+        top: 80%;
+        right: 50%;
+    }
+}
+.right-justified {
+    float:right !important;
+    margin-top:-10px;
+
+}

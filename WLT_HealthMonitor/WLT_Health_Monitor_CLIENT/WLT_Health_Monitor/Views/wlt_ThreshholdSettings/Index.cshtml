@@ -1,0 +1,66 @@
+﻿@*@model IEnumerable<WLT_HealthMonitor.Models.wlt_ThreshholdSettings>*@
+@model IEnumerable<WLT_Health_Monitor.Models.ViewModel.ThreshholdViewModel>
+
+@{
+    ViewData["Title"] = "Settings";
+}
+
+<div style="margin-top:10px;" class=" container-fluid row">
+    <p style="margin-top:10px" class="">
+        <a asp-action="Create" class="waves-effect waves-light btn">Threshold</a>
+        <a asp-controller="wlt_Connections" asp-action="index" class="waves-effect waves-light btn">Server Connections</a>
+        <a asp-controller="wlt_ThreshholdSettings" asp-action="FrequencySettings" class="waves-effect waves-light btn">Reporting Frequency</a>
+
+    </p>
+    <h2>Threshhold  Settings</h2>
+
+    <p>
+        <a class=" btn waves-effect" asp-action="Create">Create New</a>
+
+
+
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Resource)
+                </th>
+                <th>
+                        @Html.DisplayNameFor(model => model.Host)
+                    </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ifkServerID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResouceValue)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Resource)
+                    </td>
+                    <td>
+                            @Html.DisplayFor(modelItem => item.Host)
+                        </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ifkServerID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ResouceValue)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ipkThreshholdID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ipkThreshholdID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ipkThreshholdID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,64 @@
+﻿@model WLT_HealthMonitor.Models.wlt_ServerLogs
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>wlt_ServerLogs</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ipkServerlogID" />
+            <div class="form-group">
+                <label asp-for="ServerID" class="control-label"></label>
+                <input asp-for="ServerID" class="form-control" />
+                <span asp-validation-for="ServerID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServerName" class="control-label"></label>
+                <input asp-for="ServerName" class="form-control" />
+                <span asp-validation-for="ServerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DISK" class="control-label"></label>
+                <input asp-for="DISK" class="form-control" />
+                <span asp-validation-for="DISK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CPU" class="control-label"></label>
+                <input asp-for="CPU" class="form-control" />
+                <span asp-validation-for="CPU" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RAM" class="control-label"></label>
+                <input asp-for="RAM" class="form-control" />
+                <span asp-validation-for="RAM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MSMQ" class="control-label"></label>
+                <input asp-for="MSMQ" class="form-control" />
+                <span asp-validation-for="MSMQ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SendDate" class="control-label"></label>
+                <input asp-for="SendDate" class="form-control" />
+                <span asp-validation-for="SendDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

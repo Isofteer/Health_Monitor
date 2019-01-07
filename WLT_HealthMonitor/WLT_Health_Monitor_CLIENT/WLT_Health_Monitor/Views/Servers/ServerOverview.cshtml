@@ -1,0 +1,166 @@
+﻿
+@{
+    ViewData["Title"] = "ServerOverview";
+}
+
+<h2>Servers Overview </h2>
+
+
+<div class="table-wrapper">
+
+
+    <table id="gOverview" class="cls-table">
+        <tr class="act" data-name="CPU" id="rCPU data"><td class="label-row">CPU</td></tr>
+        <tr class="act" data-name="RAM" id="rRAM"><td class="label-row">RAM</td></tr>
+        <tr class="act" data-name="DISK" id="rDISK"><td class="label-row">DISK</td></tr>
+        <tr style="display:none" class="act" data-name="MSMQ" id="rMSMQ"><td class="label-row">MSMQ</td></tr>
+        <tr class="act" data-name="MSMQ_ALERTS" id="rMSMQ_ALERTS"><td class="label-row">MSMQ ALERTS </td></tr>
+        <tr class="act" data-name="MSMQ_UTSIN" id="rMSMQ_UTSIN"><td class="label-row">MSMQ UTS-IN</td></tr>
+    </table>
+</div>
+
+@section scripts {
+
+@*<script src="~/lib/jquery/dist/jquery.js"></script>*@
+
+
+    <script type="text/javascript">
+
+      
+        var _tblO = $("#gOverview");
+
+        var headerTR = $.parseHTML("<tr><td class ='gOverview-header'> Resource </td></tr>");
+
+        $.each(HubsConnection, function (index, ConnObject) {
+
+          
+
+            var tcell = $("<td>" + ConnObject.Host + " </td>");
+            tcell.css("cursor","pointer")
+            tcell.click(function () { 
+
+                var a = $("<a></a>");
+                a.text($(this).text());
+
+               // $(this).html(a);
+                var data = new Object();
+                data.conn_ID = ConnObject.conn_ID;
+
+
+                window.location.href = "/Servers/Detail/" + ConnObject.conn_ID;
+            
+              
+
+
+            });
+
+            $(headerTR).append(tcell);
+
+            tcell.addClass("gOverview-header");
+
+            $("#gOverview").prepend(headerTR)
+           
+            $.each($("#gOverview tr.act"),function (i,tr) { 
+
+                var params = $(tr).attr("data-name")
+
+               // var param = td.data('data-name');
+
+                var td = $("<td class ='" + $(tr).attr("data-name")+"' > " + index+"</td>");             
+                
+                $(tr).append(td);
+
+                ConnObject.hub.on('broadcastMessage', function (userName, message) {
+                    
+                    var serverLog = JSON.parse(message);
+                   
+
+                  var origin  =   new URL("/", ConnObject.Connection).origin
+                    
+                  if (this.connection.baseUrl == origin)
+                    {
+                                            
+
+
+                      if (td.hasClass("MSMQ_UTSIN") || td.hasClass("MSMQ_ALERTS") )
+                      {
+                          td.text(serverLog[td[0].className].toFixed(0));
+                          td.css({ "background-color": "#fff", "color": "black" });
+                      }
+                     
+                      else { 
+
+                          td.text(serverLog[td[0].className].toFixed(0) + " %");
+                          var color = Colormodifier(serverLog[td[0].className]);
+                          td.css("background-color", color);
+                      }
+                     
+                       
+                        td.fadeIn(700,1);
+
+                    }
+
+
+                });
+
+            })          
+            
+        });
+
+       
+
+        var Colormodifier = function (value) {
+
+            var colors =
+                ["#00FF00",
+                    "#00FF00",
+                    "#00C800",
+                    "#00E064",
+                    "#00DB10",
+                    "#41D700",
+                    "#8ED200",
+                    "#CDC200",
+                    "#E52C20",
+                    "#A61108",
+                    "#7C0D06",
+
+                ];
+
+            var shades = [
+                 "#00FF00" ,
+                 "#33ff00" ,
+                 "#66ff00" ,
+                "#99ff00" ,
+                 "#ccff00" ,
+                 "#FFFF00" ,
+                 "#FFCC00" ,
+                 "#ff9900" ,
+                 "#ff6600" ,
+                 "#FF3300" ,
+                 "#FF0000" ,
+              ]
+               
+                     
+                   
+             
+
+                   
+               
+            
+            var decimalValue = (value / 10).toFixed(0);
+
+            return shades[decimalValue];
+
+
+        
+        }
+
+     
+
+
+    </script>
+
+
+
+
+}

@@ -1,0 +1,82 @@
+﻿@model IEnumerable<WLT_Health_Monitor.Models.NotificationViewModel>
+
+@{
+    ViewData["Title"] = "NotificationHistory";
+}
+
+<h2>Notification History</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Server)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.MailAddress)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Resource)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResourceValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isSent)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+    {
+       
+        <tr class="@(item.isSent==0 ? "red-background ":"green-background")">
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Server)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.MailAddress)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Resource)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResourceValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SentDate)
+            </td>
+            @if (item.isSent == 0)
+            {
+                    <td>
+                        No
+                    </td>
+
+            }
+            else
+            {
+                <td>
+                    Yes
+                </td>
+             }
+
+
+        </tr>
+
+
+
+}
+    </tbody>
+</table>
+
+

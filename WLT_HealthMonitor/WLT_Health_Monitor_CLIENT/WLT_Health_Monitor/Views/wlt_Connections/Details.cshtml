@@ -1,0 +1,30 @@
+﻿@model WLT_HealthMonitor.Models.wlt_Connections
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>wlt_Connections</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Connection)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Connection)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Host)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Host)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.conn_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

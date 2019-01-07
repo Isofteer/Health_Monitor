@@ -1,0 +1,49 @@
+﻿
+@model WLT_HealthMonitor.Models.wlt_ThreshholdSettings
+
+
+@{
+    ViewData["Title"] = "FrequencySettings";
+}
+
+<h2>Frequency Settings</h2>
+
+
+@{
+    var selectionlist = (List<SelectListItem>)ViewData["selectionlist"];
+}
+
+
+<div class=" row ">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6 card">
+
+        <h4>Set Frequency</h4>
+
+        <form asp-action="SetFrequecy" method="POST" class="">
+            <label>  Frequency </label>
+            <select name="settingValue" style="display:block">
+                <option value="1"> 1 Second</option>
+                <option value="2"> 2 Seconds</option>
+                <option value="3"> 3 Seconds</option>
+                <option value="4"> 4 Seconds</option>
+                <option value="5"> 5 Seconds</option>
+                <option value="6"> 6 Seconds</option>
+                <option value="7"> 7 Seconds</option>
+                <option value="8"> 8 Seconds</option>
+                <option value="9"> 9 Seconds</option>
+                <option value="10">10 Seconds</option>
+
+            </select>
+            <label>Server </label>
+            <select class="form-control"  name="Server" asp-items="selectionlist"></select>
+
+            <input type="submit" style="margin:10px;" class=" btn waves-effect waves-light " value="Set" />
+
+        </form>
+
+    </div>
+
+
+
+</div>

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WLT_HealthMonitor.Models.wlt_HealthNotificationHistory>
+
+@{
+    ViewData["Title"] = "Notification History ";
+}
+
+<h2>Notification History</h2>
+
+<p>
+    <a class="btn btn-primary  " asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateSent)
+                </th>
+                @*<th>
+                    @Html.DisplayNameFor(model => model.ifkUserID)
+                </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.ifkServerID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.isSent)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Resource)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateSent)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.ifkUserID)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.ifkServerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isSent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resource)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ipkHistoryID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ipkHistoryID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ipkHistoryID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

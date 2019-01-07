@@ -1,0 +1,60 @@
+c:\users\user\source\repos\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.deps.json
+c:\users\user\source\repos\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.runtimeconfig.json
+c:\users\user\source\repos\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.runtimeconfig.dev.json
+c:\users\user\source\repos\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.dll
+c:\users\user\source\repos\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.pdb
+c:\users\user\source\repos\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.csprojResolveAssemblyReference.cache
+c:\users\user\source\repos\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.csproj.CoreCompileInputs.cache
+c:\users\user\source\repos\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.AssemblyInfoInputs.cache
+c:\users\user\source\repos\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.AssemblyInfo.cs
+c:\users\user\source\repos\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.dll
+c:\users\user\source\repos\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.pdb
+C:\Users\User\source\repos\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\User\Downloads\wltMonitor_Backup\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.deps.json
+C:\Users\User\Downloads\wltMonitor_Backup\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.runtimeconfig.json
+C:\Users\User\Downloads\wltMonitor_Backup\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.runtimeconfig.dev.json
+C:\Users\User\Downloads\wltMonitor_Backup\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.dll
+C:\Users\User\Downloads\wltMonitor_Backup\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.pdb
+C:\Users\User\Downloads\wltMonitor_Backup\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.csprojResolveAssemblyReference.cache
+C:\Users\User\Downloads\wltMonitor_Backup\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\wltMonitor_Backup\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\User\Downloads\wltMonitor_Backup\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.AssemblyInfoInputs.cache
+C:\Users\User\Downloads\wltMonitor_Backup\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.AssemblyInfo.cs
+C:\Users\User\Downloads\wltMonitor_Backup\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.dll
+C:\Users\User\Downloads\wltMonitor_Backup\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.pdb
+C:\Users\User\Music\test\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.deps.json
+C:\Users\User\Music\test\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.runtimeconfig.json
+C:\Users\User\Music\test\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.runtimeconfig.dev.json
+C:\Users\User\Music\test\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.dll
+C:\Users\User\Music\test\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.pdb
+C:\Users\User\Music\test\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.csprojResolveAssemblyReference.cache
+C:\Users\User\Music\test\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.csproj.CoreCompileInputs.cache
+C:\Users\User\Music\test\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.AssemblyInfoInputs.cache
+C:\Users\User\Music\test\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.AssemblyInfo.cs
+C:\Users\User\Music\test\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.dll
+C:\Users\User\Music\test\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.pdb
+C:\Users\User\Music\test\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\User\Desktop\work space\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.deps.json
+C:\Users\User\Desktop\work space\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.runtimeconfig.json
+C:\Users\User\Desktop\work space\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.runtimeconfig.dev.json
+C:\Users\User\Desktop\work space\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.dll
+C:\Users\User\Desktop\work space\WLT_Health_Monitor\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.pdb
+C:\Users\User\Desktop\work space\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\work space\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\work space\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\User\Desktop\work space\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\work space\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.AssemblyInfo.cs
+C:\Users\User\Desktop\work space\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.dll
+C:\Users\User\Desktop\work space\WLT_Health_Monitor\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.pdb
+C:\Users\User\Desktop\work space\WLT_Health_Monitor_CLIENT\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.deps.json
+C:\Users\User\Desktop\work space\WLT_Health_Monitor_CLIENT\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.runtimeconfig.json
+C:\Users\User\Desktop\work space\WLT_Health_Monitor_CLIENT\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.runtimeconfig.dev.json
+C:\Users\User\Desktop\work space\WLT_Health_Monitor_CLIENT\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.dll
+C:\Users\User\Desktop\work space\WLT_Health_Monitor_CLIENT\WLT_Health_Monitor\bin\Debug\netcoreapp2.0\WLT_Health_Monitor.pdb
+C:\Users\User\Desktop\work space\WLT_Health_Monitor_CLIENT\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\work space\WLT_Health_Monitor_CLIENT\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\work space\WLT_Health_Monitor_CLIENT\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\User\Desktop\work space\WLT_Health_Monitor_CLIENT\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\work space\WLT_Health_Monitor_CLIENT\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.AssemblyInfo.cs
+C:\Users\User\Desktop\work space\WLT_Health_Monitor_CLIENT\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.dll
+C:\Users\User\Desktop\work space\WLT_Health_Monitor_CLIENT\WLT_Health_Monitor\obj\Debug\netcoreapp2.0\WLT_Health_Monitor.pdb

@@ -1,0 +1,222 @@
+﻿<h4> Visual Representation </h4>
+<div class="row">
+    <div class="col m6">
+        <div class="card">
+            <span class="card-title">CPU   </span>
+            <div style="width:100%" class="card horizontal card-content">
+                <div class="chart chartCPU " style="height:300px;width:100%" id="chartCPU">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col m6">
+        <div class="card">
+            <span class="card-title">DISK</span>
+            <div style="width:100%" class="card horizontal card-content">
+                <div class="chart chartDISK" style="height:300px;width:100%" id="chartDISK">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="col m6">
+        <div class="card">
+            <span class="card-title">RAM</span>
+            <div style="width:100%" class="card horizontal card-content">
+                <div class="chart chartRAM" style="height:300px;width:100%" id="chartRAM">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col m6">
+        <div class="card">
+            <span class="card-title">MSMQ</span>
+            <div style="width:100%" class="card horizontal card-content">
+                <div class="chart chartMSMQ" style="height:300px;width:100%" id="chartMSMQ">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+@section Scripts {
+
+    @*<script src="~/lib/signalr/jquery-1.6.4.min.js"></script>
+        <script src="~/lib/signalr/jquery.signalR-2.2.3.min.js"></script>
+        <script src="~/lib/amcharts/amcharts.js"></script>
+        <script src="~/lib/amcharts/serial.js"></script>*@
+  
+
+
+<script type="text/javascript">
+         
+
+        $(function () {
+
+
+            var graphs = [];
+
+            var charts = [];
+
+            $.each($(".chart"), function (index, el) {
+
+                var chartObject = createChart(el);
+
+                var chart = chartObject.chart;
+
+                charts.push(chart);
+
+                HubsConnection.forEach(function (value, index) {
+
+                    var graph = new AmCharts.AmGraph();
+
+                    graph.title = "";
+
+                    graph.bullet = "round";
+
+                    graph.valueField = "g" + index;
+
+                    graph.hideBulletsCount = 30;
+
+                    graph.id_ = "graph" + index;
+
+                    graph.type_el = el;
+
+                    chart.addGraph(graph);
+
+                })
+
+            })
+
+            console.log(charts)
+
+
+            var ServerListeners = function (index, hub) {
+
+                hub.on('broadcastMessage', function (userName, message) {
+                    var Server_ = JSON.parse(message);
+
+
+                    console.log(Server_);
+
+                    charts.forEach(function (chart) {
+                        chart.graphs.forEach(function (graph) {
+
+                            if (graph.type_el == $("#chartCPU")[0] && graph.id_ == "graph" + index) {
+                                LoadCPUgraph(graph, Server_, index);
+                            }
+                            if (graph.type_el == $("#chartDISK")[0] && graph.id_ == "graph" + index) {
+                                LoadDISKgraph(graph, Server_, index);
+                            }
+                            if (graph.type_el == $("#chartRAM")[0] && graph.id_ == "graph" + index) {
+                                LoadRAMgraph(graph, Server_, index);
+                            }
+
+                            if (graph.type_el == $("#chartMSMQ")[0] && graph.id_ == "graph" + index) {
+                                LoadMSMQgraph(graph, Server_, index);
+                            }
+
+
+
+
+
+
+                        })
+
+                    })
+
+
+                });
+
+
+
+            }
+
+            $.each(HubsConnection, function (index, ConnObject) {
+
+                ServerListeners(index, ConnObject.hub);
+
+            })
+
+
+            function LoadCPUgraph(graph, Server_, index) {
+                var _O_jct = new Object();
+                _O_jct["g" + index] = Server_.CPU.toFixed(2);
+                _O_jct.date = new Date();
+                graph.title = Server_.COMPUTERNAME;
+                graph.chart.dataProvider.push(_O_jct);
+                graph.chart.validateData();
+
+
+            }
+
+            function LoadDISKgraph(graph, Server_, index) {
+
+                graph.title = Server_.COMPUTERNAME;
+
+                var _O_jct = new Object();
+
+                _O_jct["g" + index] = Server_.DISK.toFixed(2);
+
+                _O_jct.date = new Date();
+
+                graph.chart.dataProvider.push(_O_jct);
+
+                graph.chart.validateData();
+
+            }
+
+            function LoadRAMgraph(graph, Server_, index) {
+
+                graph.title = Server_.COMPUTERNAME;
+
+                var _O_jct = new Object();
+
+                _O_jct["g" + index] = Server_.RAM.toFixed(2);
+
+                _O_jct.date = new Date();
+
+                graph.chart.dataProvider.push(_O_jct);
+
+                graph.chart.validateData();
+
+            }
+
+
+
+            function LoadMSMQgraph(graph, Server_, index) {
+
+                graph.title = Server_.COMPUTERNAME;
+
+                var _O_jct = new Object();
+
+                _O_jct["g" + index] = Server_.MSMQ.toFixed(2);
+
+                _O_jct.date = new Date();
+
+                graph.chart.dataProvider.push(_O_jct);
+
+                graph.chart.validateData();
+
+            }
+
+
+
+
+        })
+</script>
+}
